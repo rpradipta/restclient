@@ -36,7 +36,7 @@
                 <thead>
                   <tr>
                     <th style="width: 5%; text-align: center;">No</th>
-                    <th style="width: 30%; text-align: center;">Id</th>
+                    <th style="width: 30%; text-align: center;">Kode Tiket</th>
                     <th style="width: 20%; text-align: center;">Id_Airline</th>
                     <th style="width: 15%; text-align: center;">Tgl</th>
                     <th style="width: 15%; text-align: center;">Harga</th>
@@ -49,7 +49,7 @@
                   <?php if(isset($dataproduk) and $dataproduk):$i=1; foreach($dataproduk as $row): ?>
                   <tr>
                     <td class="text-center"><?php echo $i; ?></td>
-                    <td><?php echo $row->id; ?></td>
+                    <td><?php echo $row->kode_tiket; ?></td>
                     <td><?php echo $row->id_airline; ?></td>
                     <td><?php echo $row->tgl_berangkat; ?></td>
                     <td><?php echo $row->harga; ?></td>
@@ -57,8 +57,8 @@
                     <td><?php echo $row->tujuan; ?></td>
                     <td class="text-center">
                       <div class="btn-group">
-                        <a title="Ubah" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/produk/ubah/'.$row->id; ?>"><i class="fas fa-pencil-alt"></i></a>
-                        <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/produk/hapus/'.$row->id; ?>"><i class="fas fa-trash"></i></a>
+                        <a title="Ubah" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/tiket/ubah/'.$row->id; ?>"><i class="fas fa-pencil-alt"></i></a>
+                        <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/tiket/hapus/'.$row->id; ?>"><i class="fas fa-trash"></i></a>
                       </div>
                     </td>
                   </tr>
