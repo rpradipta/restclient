@@ -58,11 +58,11 @@ class Tiket extends CI_Controller{
             }
             redirect('produk');
         }else{
-            $params = array('id'    =>  $this->uri->segment(3));
+            $params = array('kode_tiket'    =>  $this->uri->segment(3));
             $data['title'] = "Ubah Data";
-            $produk = json_decode($this->curl->simple_get($this->API.'/produk',$params));
+            $produk = json_decode($this->curl->simple_get($this->API.'/tiket',$params));
             $data['dataproduk'] = $produk[0];
-            $this->load->view('produk/ubah',$data);
+            $this->load->view('tiket/ubah',$data);
         }
     }
     
@@ -71,7 +71,7 @@ class Tiket extends CI_Controller{
         if(empty($id)){
             redirect('produk');
         }else{
-            $delete =  $this->curl->simple_delete($this->API.'/produk', array('id'=>$id), array(CURLOPT_BUFFERSIZE => 10)); 
+            $delete =  $this->curl->simple_delete($this->API.'/tiket', array('id'=>$id), array(CURLOPT_BUFFERSIZE => 10)); 
             if($delete)
             {
                 $this->session->set_flashdata('hasil','Hapus Data Berhasil');
