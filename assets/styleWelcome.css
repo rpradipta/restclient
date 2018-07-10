@@ -27,3 +27,32 @@
     font-size: 12px;
     font-style: italic;
 }
+
+.nav-bar{
+    box-shadow: 0px 3px 2px #b1b1b1;
+}
+
+.nav-bar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-bar ul li{
+    float: left;
+}
+
+.nav-bar ul li a{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+    font-family: Hums;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #b1b1b1;
+    color: white;
+}

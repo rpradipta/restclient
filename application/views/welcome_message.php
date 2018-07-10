@@ -11,13 +11,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <body>
         <div class="header">
             <center><h1><i class="fa fa-cloud" style="font-size: 18px;"></i>TravelOra</h1>
-                <h5>"Mau Travel? Yakin travel dolo, Kemudian pesan tiket"</h5></center>
+                <h5>"Mau Travel? Yakinin travel dolo, Pesan Tiket Kemudian"</h5></center>
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cek Tiket</a></li>
+                <li><a href="#">Cek Pesanan</a></li>
+            </ul>
         </div>
         <div id="container">
-            <div>
-                
-            </div>
-
+            
         </div>
 
     </body>
