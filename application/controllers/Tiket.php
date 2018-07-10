@@ -44,7 +44,7 @@ class Tiket extends CI_Controller{
         if(isset($_POST['submit'])){
             $data = array(
                 'id' => $this->input->post('id'),
-                'tgl_berangkat'        =>  $this->input->post('tgl'),
+                'tgl'        =>  $this->input->post('tgl'),
                 'harga'      =>  $this->input->post('harga'),
                 'asal'     =>  $this->input->post('asal'),              
                 'tujuan'     =>  $this->input->post('tujuan')
@@ -70,9 +70,9 @@ class Tiket extends CI_Controller{
     // hapus data produk
     function hapus($id){
         if(empty($id)){
-            redirect('produk');
+            redirect('tiket');
         }else{
-            $delete =  $this->curl->simple_delete($this->API.'/tiket', array('id'=>$id), array(CURLOPT_BUFFERSIZE => 10)); 
+            $delete =  $this->curl->simple_delete($this->API.'/tiket', array('kode_tiket'=>$id), array(CURLOPT_BUFFERSIZE => 10)); 
             if($delete)
             {
                 $this->session->set_flashdata('hasil','Hapus Data Berhasil');
@@ -80,7 +80,7 @@ class Tiket extends CI_Controller{
             {
                $this->session->set_flashdata('hasil','Hapus Data Gagal');
             }
-            redirect('produk');
+            redirect('tiket');
         }
     }
 }
