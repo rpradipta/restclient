@@ -14,14 +14,17 @@
     margin: 0;
 }
 
-.header{
+.headers{
     background-color: rgb(35, 148, 201);
-    color: white;
-    font-family: Hums;
     padding: 20px;
 }
 
-.header h5{
+.headers h1{
+    color: white;
+    font-family: Hums;
+}
+
+.headers h5{
     color: rgb(0, 187, 255);
     font-family: Kalinga;
     font-size: 12px;
