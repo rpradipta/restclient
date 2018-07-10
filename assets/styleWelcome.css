@@ -1,0 +1,29 @@
+
+@font-face {
+    font-family: Hums;
+    src: url(font/Hums.ttf);
+}
+
+@font-face {
+    font-family: Kalinga;
+    src: url(font/kalinga.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header{
+    background-color: rgb(35, 148, 201);
+    color: white;
+    font-family: Hums;
+    padding: 20px;
+}
+
+.header h5{
+    color: rgb(0, 187, 255);
+    font-family: Kalinga;
+    font-size: 12px;
+    font-style: italic;
+}
