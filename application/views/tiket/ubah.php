@@ -25,7 +25,7 @@
             </div>
             <div><br />
                 <form action="<?php echo base_url()."index.php/produk/ubah"; ?>" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="id"  value="<?php echo $dataproduk->id; ?>" />
+                    <input type="hidden" name="id"  value="<?php echo $dataproduk->kode_tiket; ?>" />
                     <div class="row" style="padding-bottom: 10px;">
                         <label class="col-md-2">Nama <span class="required">*</span></label>
                         <div class="col-md-4">
