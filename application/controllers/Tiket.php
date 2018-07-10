@@ -43,12 +43,13 @@ class Tiket extends CI_Controller{
     function ubah(){
         if(isset($_POST['submit'])){
             $data = array(
-                'id'        =>  $this->input->post('id'),
-                'nama'      =>  $this->input->post('nama'),
-                'tipe'     =>  $this->input->post('tipe'),
+                'id' => $this->input->post('id'),
+                'tgl_berangkat'        =>  $this->input->post('tgl'),
                 'harga'      =>  $this->input->post('harga'),
-                'stok'     =>  $this->input->post('stok'));
-            $update =  $this->curl->simple_post($this->API.'/produk', $data, array(CURLOPT_BUFFERSIZE => 10)); 
+                'asal'     =>  $this->input->post('asal'),              
+                'tujuan'     =>  $this->input->post('tujuan')
+                );
+            $update =  $this->curl->simple_post($this->API.'/tiket', $data, array(CURLOPT_BUFFERSIZE => 10)); 
             if($update)
             {
                 $this->session->set_flashdata('hasil','Ubah Data Berhasil');
@@ -56,7 +57,7 @@ class Tiket extends CI_Controller{
             {
                $this->session->set_flashdata('hasil','Ubah Data Gagal');
             }
-            redirect('produk');
+            redirect('tiket');
         }else{
             $params = array('kode_tiket'    =>  $this->uri->segment(3));
             $data['title'] = "Ubah Data";
