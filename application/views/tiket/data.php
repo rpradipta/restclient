@@ -57,8 +57,8 @@
                     <td><?php echo $row->tujuan; ?></td>
                     <td class="text-center">
                       <div class="btn-group">
-                        <a title="Ubah" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/tiket/ubah/'.$row->id; ?>"><i class="fas fa-pencil-alt"></i></a>
-                        <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/tiket/hapus/'.$row->id; ?>"><i class="fas fa-trash"></i></a>
+                        <a title="Ubah" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/tiket/ubah/'.$row->kode_tiket; ?>"><i class="fas fa-pencil-alt"></i></a>
+                        <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/tiket/hapus/'.$row->kode_tiket; ?>"><i class="fas fa-trash"></i></a>
                       </div>
                     </td>
                   </tr>
