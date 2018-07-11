@@ -33,28 +33,39 @@
             </div>
             <div><br />
                 <form action="<?php echo base_url()."index.php/tiket/tambah"; ?>" method="post" enctype="multipart/form-data">
-                    <div class="row" style="padding-bottom: 10px;">
-                        <label class="col-md-2">Nama <span class="required">*</span></label>
+                 <div class="row" style="padding-bottom: 10px;">
+                        <label class="col-md-2">Maskapai <span class="required">*</span></label>
                         <div class="col-md-4">
-                            <input type="text" name="nama" required="required" class="form-control col-md-8" />
+                            <!-- <input type="text" name="id_airline" required="required" class="form-control col-md-8" /> -->
+                            <select name='airline' class="form-control col-md-8">
+                               <option value="GA" >Garuda Indonesia </option>
+                               <option value="SJ" >Sriwijaya Air</option>
+                               <option value="ID" >Batik Air</option>                                
+                            </select>
                         </div>
                     </div>
                     <div class="row" style="padding-bottom: 10px;">
-                        <label class="col-md-2">Tipe</label>
+                        <label class="col-md-2">tanggal <span class="required">*</span></label>
                         <div class="col-md-4">
-                            <input type="text" name="tipe" class="form-control col-md-8" />
+                            <input type="date" name="tgl" required="required" class="form-control col-md-8" />
                         </div>
                     </div>
                     <div class="row" style="padding-bottom: 10px;">
-                        <label class="col-md-2">Harga</label>
+                        <label class="col-md-2">harga</label>
                         <div class="col-md-4">
                             <input type="number" name="harga" class="form-control col-md-8" />
                         </div>
                     </div>
                     <div class="row" style="padding-bottom: 10px;">
-                        <label class="col-md-2">Stok</label>
+                        <label class="col-md-2">asal</label>
                         <div class="col-md-4">
-                            <input type="number" name="stok" required="required" class="form-control col-md-8" />
+                            <input type="text" name="asal" class="form-control col-md-8" />
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom: 10px;">
+                        <label class="col-md-2">tujuan</label>
+                        <div class="col-md-4">
+                            <input type="text" name="tujuan" required="required" class="form-control col-md-8" />
                         </div>
                     </div>
                     <div class="row">

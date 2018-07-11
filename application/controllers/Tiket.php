@@ -20,11 +20,12 @@ class Tiket extends CI_Controller{
     function tambah(){
         if(isset($_POST['submit'])){
             $data = array(
-                'nama'      =>  $this->input->post('nama'),
-                'tipe'     =>  $this->input->post('tipe'),
-                'harga'      =>  $this->input->post('harga'),
-                'stok'     =>  $this->input->post('stok'));
-            $insert =  $this->curl->simple_put($this->API.'/produk', $data, array(CURLOPT_BUFFERSIZE => 10)); 
+                'id_airline' => $this->input->post('airline'),
+                'tgl'      =>  $this->input->post('tgl'),
+                'harga'     =>  $this->input->post('harga'),
+                'asal'      =>  $this->input->post('asal'),
+                'tujuan'     =>  $this->input->post('tujuan'));
+            $insert =  $this->curl->simple_put($this->API.'/tiket', $data, array(CURLOPT_BUFFERSIZE => 10)); 
             if($insert)
             {
                 $this->session->set_flashdata('hasil','Tambah Data Berhasil');
@@ -32,7 +33,7 @@ class Tiket extends CI_Controller{
             {
                $this->session->set_flashdata('hasil','Tambah Data Gagal');
             }
-            redirect('produk');
+            redirect('tiket');
         }else{
             $data['title'] = "Tambah Data";
             $this->load->view('tiket/tambah',$data);
