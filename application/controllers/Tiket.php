@@ -84,4 +84,21 @@ class Tiket extends CI_Controller{
             redirect('tiket');
         }
     }
+
+    function pesan($id){
+        if(empty($id)){
+            redirect('tiket');
+        }else{
+            $pesan = $this->curl->simple_put($this->API.'/pesan', array('kode_tiket'=>$id), array(CURLOPT_BUFFERSIZE => 10));
+            $delete =  $this->curl->simple_delete($this->API.'/tiket', array('kode_tiket'=>$id), array(CURLOPT_BUFFERSIZE => 10)); 
+            if($delete)
+            {
+                $this->session->set_flashdata('hasil','Tiket berhasil dipesan');
+            }else
+            {
+               $this->session->set_flashdata('hasil','Tiket gagal dipesan');
+            }
+            redirect('tiket');
+        }   
+    }
 }

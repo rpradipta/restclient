@@ -35,11 +35,11 @@
                                 </div>
                             <?php } ?>
 
-                            <div style="padding-bottom: 20px;">
+                           <!--  <div style="padding-bottom: 20px;">
                                 <a href="<?php echo base_url() . 'index.php/pesanan/tambah/'; ?>" class="btn btn-info" role="button">
                                     <i class="fa fa-plus"></i> Tambah Data
                                 </a>
-                            </div>
+                            </div> -->
                             <div class="table-responsive">
                                 <table id="datatable" class="table table-bordered table-striped">
                                     <thead>
@@ -64,8 +64,7 @@
                                                     <td><?php echo $row->tgl_beli; ?></td>
                                                     <td><?php echo $row->status; ?></td>                                                
                                                     <td class="text-center">
-                                                        <div class="btn-group">
-                                                            <a title="Ubah" class="btn btn-sm btn-default" href="<?php echo base_url() . 'index.php/pesanan/ubah/' . $row->kode_order; ?>"><i class="fas fa-pencil-alt"></i></a>
+                                                        <div class="btn-group">                                                            
                                                             <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url() . 'index.php/pesanan/hapus/' . $row->kode_order; ?>"><i class="fas fa-trash"></i></a>
                                                         </div>
                                                     </td>

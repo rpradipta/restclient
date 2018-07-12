@@ -47,7 +47,7 @@
                     <div class="row" style="padding-bottom: 10px;">
                         <label class="col-md-2">tanggal <span class="required">*</span></label>
                         <div class="col-md-4">
-                            <input type="date" name="tgl" required="required" class="form-control col-md-8" />
+                            <input type="date" name="tgl" required="required" class="form-control col-md-8" value="<?php echo date('Y-m-d'); ?>"  />
                         </div>
                     </div>
                     <div class="row" style="padding-bottom: 10px;">
