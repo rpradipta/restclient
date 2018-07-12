@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="<?php echo base_url() . 'index.php'; ?>">Home</a></li>
                 <li><a href="<?php echo base_url() . 'index.php/tiket'; ?>">Cek Tiket</a></li>
-                <li><a href="#">Cek Pesanan</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/pesanan'; ?>">Cek Pesanan</a></li>
             </ul>
         </div>
         <div class="container" style="padding-top: 50px;">
